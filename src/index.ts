@@ -20,7 +20,7 @@ const getNextPrompt = ():string => {
 const text = span({}, getNextPrompt());
 
 const app = div({ class: "container"},
-  h1({}, "Conversation Prompts"),
+  h1({}, "Conversation Promp Generator"),
   p({}, "In our current state of social isolation in response to COVID-19, many people are having a hard time finding meaningful social interaction. This web app aims to alleviate that by providing questions you can use to prompt meaningful conversations, even over a video call or text message conversation."),
   p({}, "We recommend that both you and your friend answer the question."),
   blockquote({class: "main-text"}, text),
