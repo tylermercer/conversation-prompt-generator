@@ -1,3 +1,6 @@
 a {
   cursor: pointer;
 }
+:root {
+  --color-primary: #673299;
+}
