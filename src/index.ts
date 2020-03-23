@@ -29,7 +29,7 @@ const app = div({ class: "container"},
     }, 
     "profound loneliness"
   ),
-  ". This web app aims to alleviate that by providing questions to help you have meaningful conversations, even over a video call or text message conversation."),
+  ". This web app aims to help alleviate that, by providing questions to help you have meaningful conversations, even over a video call or text message conversation."),
   p({}, "We recommend that both you and your friend answer the question."),
   blockquote({class: "main-text"}, text),
   p({class: "row full-width is-center"},
