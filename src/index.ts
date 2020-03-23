@@ -83,7 +83,7 @@ const app = div({ class: "container"},
         ),
         " "
       ),
-      "Prompts are adapted from ",
+      "Some prompts are adapted from ",
       a({href:"https://journals.sagepub.com/doi/abs/10.1177/0146167297234003", target: "blank"}, "this article"),
       "."
     ),
