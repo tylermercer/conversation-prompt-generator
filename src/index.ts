@@ -33,7 +33,12 @@ const app = div({ class: "container"},
   nav({class: "nav"}, 
     h1({class: "nav-left"}, "Conversation Prompt Generator"),
     a(
-      {class: "button clear icon-only", href: "https://github.com/tylermercer/conversation-prompt-generator", target: "blank", title: "View source on GitHub"}, 
+      {
+        class: "hide-xs button clear icon-only", 
+        href: "https://github.com/tylermercer/conversation-prompt-generator", 
+        target: "blank", 
+        title: "View source on GitHub"
+      }, 
       img({src: "https://icongr.am/feather/github.svg?size=20px&color=673299", alt: "GitHub"})
     ),
   ),  
@@ -70,7 +75,15 @@ const app = div({ class: "container"},
     small({class: "text-grey"},
       "Built with 💜 by ",
       a({href:"https://github.com/tylermercer", target: "blank"}, "Tyler Mercer"),
-      ". Prompts are adapted from ",
+      ". ",
+      span({class:"hide-sm hide-md hide-lg"}, 
+        a(
+          {href:"https://github.com/tylermercer/conversation-prompt-generator", target: "blank"}, 
+          "View source on GitHub."
+        ),
+        " "
+      ),
+      "Prompts are adapted from ",
       a({href:"https://journals.sagepub.com/doi/abs/10.1177/0146167297234003", target: "blank"}, "this article"),
       "."
     ),
