@@ -1,6 +1,7 @@
 import { p, span, div, button, blockquote } from 'markup-as-js';
 
 import prompts from './prompts';
+import CopyButton from './CopyButton';
 
 const Generator = (): HTMLElement => {
   var remainingPrompts: string[] = [...prompts];
@@ -38,6 +39,7 @@ const Generator = (): HTMLElement => {
         }, 
         "New Prompt"
       ),
+      CopyButton(text)
     ),
   );
 }
