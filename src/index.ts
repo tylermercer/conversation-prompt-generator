@@ -46,7 +46,7 @@ const app = div({ class: "container"},
       span({class:"hide-sm hide-md hide-lg"}, 
         a(
           {href:"https://github.com/tylermercer/conversation-prompt-generator", target: "blank"}, 
-          "View source on GitHub."
+          "Contribute on GitHub!"
         ),
         " "
       ),
