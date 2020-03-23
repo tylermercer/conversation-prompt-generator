@@ -9,10 +9,20 @@ import prompts from './prompts';
 var remainingPrompts: string[] = [...prompts];
 var usedPrompts: string[] = [];
 
+const alert = p({class: "is-center full-width"}, div({ class: "alert", disabled: true}, "You've seen all the prompts! But you're more than welcome to go through them again. 🙂"));
+
+alert.style.display = "none";
+
 const getNextPrompt = ():string => {
   let index = Math.floor(Math.random() * Math.min(remainingPrompts.length, 5));
   let prompt = remainingPrompts[index];
-  remainingPrompts = remainingPrompts.length > 1 ? [...remainingPrompts.slice(0, index), ...remainingPrompts.slice(index + 1)] : [...prompts];
+  if (remainingPrompts.length <= 1) {
+    alert.style.display = "";
+    remainingPrompts = [...prompts];
+  }
+  else {
+    remainingPrompts = [...remainingPrompts.slice(0, index), ...remainingPrompts.slice(index + 1)];
+  }
   usedPrompts = [...usedPrompts, prompt];
   return prompt;
 }
@@ -32,6 +42,7 @@ const app = div({ class: "container"},
   ". This web app aims to help alleviate that, by providing questions to help you have meaningful conversations, even over a video call or text message conversation."),
   p({}, "We recommend that both you and your friend answer the question."),
   blockquote({class: "main-text"}, text),
+  alert,
   p({class: "row full-width is-center"},
     button(
       {

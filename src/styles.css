@@ -4,3 +4,10 @@ a {
 :root {
   --color-primary: #673299;
 }
+
+.alert {
+  background-color: #28bd1433;
+  color: #18790e;
+  padding: 10px;
+  border-radius: 4px;
+}
