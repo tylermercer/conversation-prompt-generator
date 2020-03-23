@@ -2,7 +2,7 @@ import { p, span, div, button, blockquote } from 'markup-as-js';
 
 import prompts from './prompts';
 
-const Generator = () => {
+const Generator = (): HTMLElement => {
   var remainingPrompts: string[] = [...prompts];
 
   var usedPrompts: string[] = [];
