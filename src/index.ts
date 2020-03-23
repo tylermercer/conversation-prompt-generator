@@ -64,7 +64,9 @@ const app = div({ class: "container"},
     small({class: "text-grey"},
       "Built with 💜 by ",
       a({href:"https://github.com/tylermercer", target: "blank"}, "Tyler Mercer"),
-      ".",
+      ". Some prompts are adapted from ",
+      a({href:"https://journals.sagepub.com/doi/abs/10.1177/0146167297234003", target: "blank"}, "this article"),
+      "."
     ),
   ),
 );
