@@ -2,7 +2,7 @@
 
 In our current (as of Mar 2020) state of widespread social isolation in response to COVID-19, many people are experiencing profound loneliness. This web app aims to help alleviate that, by providing questions to help you have meaningful conversations, even over a video call or text message conversation.
 
-## Building and running on localhost
+## Building
 
 First install dependencies:
 
@@ -22,7 +22,7 @@ To create a development build:
 npm run build-dev
 ```
 
-## Running
+## Running on localhost
 
 ```sh
 npm run start:dev
