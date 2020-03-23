@@ -1,33 +1,10 @@
-import { h1, p, span, div, button, blockquote, a, footer, small, nav, img } from 'markup-as-js';
+import { h1, p, span, div, a, footer, small, nav, img } from 'markup-as-js';
 import 'chota';
 import './styles.css';
 
-import prompts from './prompts';
+import Generator from './Generator';
 
 // const icongram = (icon: string) => `https://icongr.am/simple/${icon}.svg`;
-
-var remainingPrompts: string[] = [...prompts];
-var usedPrompts: string[] = [];
-
-const alert = p({class: "is-center full-width"}, div({ class: "alert", disabled: true}, "You've seen all the prompts! But you're more than welcome to go through them again. 🙂"));
-
-alert.style.display = "none";
-
-const getNextPrompt = ():string => {
-  let index = Math.floor(Math.random() * Math.min(remainingPrompts.length, 5));
-  let prompt = remainingPrompts[index];
-  if (remainingPrompts.length <= 1) {
-    alert.style.display = "";
-    remainingPrompts = [...prompts];
-  }
-  else {
-    remainingPrompts = [...remainingPrompts.slice(0, index), ...remainingPrompts.slice(index + 1)];
-  }
-  usedPrompts = [...usedPrompts, prompt];
-  return prompt;
-}
-
-const text = span({}, getNextPrompt());
 
 const app = div({ class: "container"},
   nav({class: "nav"}, 
@@ -52,17 +29,7 @@ const app = div({ class: "container"},
   ),
   ". This web app aims to help alleviate that, by providing questions to help you have meaningful conversations, even over a video call or text message conversation."),
   p({}, "We recommend that both you and your friend answer the question."),
-  blockquote({class: "main-text"}, text),
-  alert,
-  p({class: "row full-width is-center"},
-    button(
-      {
-        class: "button primary",
-        onclick: () => text.innerText = getNextPrompt()
-      }, 
-      "New Prompt"
-    ),
-  ),
+  Generator(),
   p({}, 
     "The more prompts you go through, the more they'll require you to disclose. This reciprocal and escalating self-disclosure ", 
     a(
