@@ -1,4 +1,4 @@
-import { h1, p, span, div, button, blockquote, a, footer, small } from 'markup-as-js';
+import { h1, p, span, div, button, blockquote, a, footer, small, nav, img } from 'markup-as-js';
 import 'chota';
 import './styles.css';
 
@@ -30,7 +30,13 @@ const getNextPrompt = ():string => {
 const text = span({}, getNextPrompt());
 
 const app = div({ class: "container"},
-  h1({}, "Conversation Prompt Generator"),
+  nav({class: "nav"}, 
+    h1({class: "nav-left"}, "Conversation Prompt Generator"),
+    a(
+      {class: "button clear icon-only", href: "https://github.com/tylermercer/conversation-prompt-generator", target: "blank", title: "View source on GitHub"}, 
+      img({src: "https://icongr.am/feather/github.svg?size=20px&color=673299", alt: "GitHub"})
+    ),
+  ),  
   p({}, "In our current state of social isolation in response to COVID-19, many people are experiencing ",
   a(
     {

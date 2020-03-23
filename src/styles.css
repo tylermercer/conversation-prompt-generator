@@ -3,7 +3,7 @@ a {
 }
 :root {
   --color-primary: #673299;
-  --grid-maxWidth: 80rem;
+  --grid-maxWidth: 100rem;
 }
 
 .alert {
