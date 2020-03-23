@@ -12,3 +12,12 @@ a {
   padding: 10px;
   border-radius: 4px;
 }
+summary * {
+  display: inline;
+}
+summary {
+  cursor: pointer;
+}
+details {
+  margin-bottom: 10px;
+}

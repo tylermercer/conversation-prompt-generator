@@ -3,6 +3,7 @@ import 'chota';
 import './styles.css';
 
 import Generator from './Generator';
+import UsageHelper from './UsageHelper';
 
 // const icongram = (icon: string) => `https://icongr.am/simple/${icon}.svg`;
 
@@ -38,6 +39,7 @@ const app = div({ class: "container"},
     ), 
     " to lead to a feeling of closeness between conversational partners."
   ),
+  UsageHelper(),
   footer({},
     small({class: "text-grey"},
       "Built with 💜 by ",
