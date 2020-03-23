@@ -3,6 +3,8 @@
 coverage/
 dist/*
 !dist/index.html
+!dist/icons/
+!dist/site.webmanifest
 node_modules/
 *.log
 
