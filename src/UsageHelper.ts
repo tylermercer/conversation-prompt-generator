@@ -1,8 +1,8 @@
-import { div, p, h3 } from "markup-as-js"
+import { p, h3, details, summary } from "markup-as-js"
 
 const UsageHelper = () => {
-  return div({}, 
-    h3({}, "How do I use this?"),
+  return details({}, 
+    summary({}, h3({},"How do I use this?")),
     p({}, "Usage Helper"),
   );
 }
