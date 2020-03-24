@@ -37,6 +37,20 @@ const prompts = [
   "Your house, containing everything you own, catches fire. After saving your loved ones and pets, you have time to safely make a final dash to save any one item. What would it be? Why?",
   "Of all the people in your family, whose death would you find most disturbing? Why?",
   "Share a personal problem and ask your partner's advice on how he or she might handle it. Also, ask your partner to reflect back to you how you seem to be feeling about the problem you have chosen.",
+  "What is your idea of happiness?",
+  "Do you think we are alone in the universe? Why?",
+  "What do you think happens after we die, if anything?",
+  "Have you ever had an epiphany? If so, what was it about?",
+  "What are some weird habits you have or had?",
+  "What do you want to achieve by the end of the year?",
+  "If you had a time machine, would you rather travel to the future or to the past? Why?",
+  "What's the weirdest situation you've ever found yourself in?",
+  "What's the best joke you've ever heard?",
+  "Ask your friend how do they feel at this moment.",
+  "What is your greatest fear?",
+  "What do you think is worth dying for, if anything?",
+  "If you could live anywhere in the world, where would you live? Why?",
+  "What animal do you identify with the most? Why?", 
 ];
 
 export default prompts;
