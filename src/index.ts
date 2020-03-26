@@ -20,16 +20,23 @@ const app = div({ class: "container"},
       img({src: "https://icongr.am/feather/github.svg?size=20px&color=673299", alt: "GitHub"})
     ),
   ),  
-  p({}, "In our current state of social isolation in response to COVID-19, many people are experiencing ",
-  a(
-    {
-      href: "https://www.deseret.com/opinion/2020/3/22/21185578/coronavirus-covid-19-side-effect-social-distancing-isolation-quarantine-loneliness", 
-      target: "blank"
-    }, 
-    "profound loneliness"
+  div({class: "row hero-container"}, 
+    img({class: "hero col-6", src: "/images/undraw_social_friends.svg"}),
+    div({class: "col-6"}, 
+      p({}, 
+        "In our current state of social isolation in response to COVID-19, many people are experiencing ",
+        a(
+          {
+            href: "https://www.deseret.com/opinion/2020/3/22/21185578/coronavirus-covid-19-side-effect-social-distancing-isolation-quarantine-loneliness", 
+            target: "blank"
+          }, 
+          "profound loneliness"
+        ),
+        ". This web app aims to help alleviate that, by providing questions to help you have meaningful conversations, even over a video call or text message conversation."
+      ),
+      p({}, "We recommend that both you and your friend answer the question."),
+    ),  
   ),
-  ". This web app aims to help alleviate that, by providing questions to help you have meaningful conversations, even over a video call or text message conversation."),
-  p({}, "We recommend that both you and your friend answer the question."),
   Generator(),
   p({}, 
     "The more prompts you go through, the more they'll require you to disclose. This reciprocal and escalating self-disclosure ", 
