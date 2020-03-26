@@ -1,4 +1,5 @@
-import { p, h3, details, summary, blockquote, span, button, img } from "markup-as-js"
+import { p, h3, details, summary, blockquote, button, SimpleObservable } from "markup-as-js";
+
 import CopyButton from "./CopyButton";
 
 const messageTemplates: string[] = [
@@ -17,17 +18,17 @@ const UsageHelper = (): HTMLElement => {
     return messageTemplates[index];
   }
 
-  const template = span({}, getNextTemplate())
+  const template = new SimpleObservable(messageTemplates[0]);
 
   return details({}, 
     summary({}, h3({},"How do I use this?")),
     p({}, "It's easy! Just reach out to a friend over social media or text and ask if you can catch up with them over video or phone call. For example:"),
-    blockquote({}, template),
+    blockquote(template),
     p({class: "row full-width is-center"},
       button(
         {
           class: "button primary",
-          onclick: () => template.innerText = getNextTemplate()
+          onclick: () => template.set(getNextTemplate())
         }, 
         "New Template"
       ),

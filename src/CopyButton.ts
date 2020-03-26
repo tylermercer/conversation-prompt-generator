@@ -1,14 +1,13 @@
-import { button, img } from "markup-as-js";
+import { button, img, Observable } from "markup-as-js";
 
-const CopyButton = (node:HTMLElement) => {
-  const copyToClipboard = (s:string):void => {
-    navigator.clipboard.writeText(s);
-  }
-
+const CopyButton = (text:Observable<string>) => {
+  let toCopy = "";
+  text.subscribe(v => toCopy = v);
+  
   return button(
     {
       class: "button icon-only outline primary",
-      onclick: () => copyToClipboard(node.innerText),
+      onclick: () => navigator.clipboard.writeText(toCopy),
       title: "Copy to clipboard"
     }, 
     img({src: "https://icongr.am/feather/copy.svg?size=16px&color=673299"}),

@@ -1,4 +1,4 @@
-import { p, span, div, button, blockquote } from 'markup-as-js';
+import { p, div, button, blockquote, SimpleObservable } from 'markup-as-js';
 
 import prompts from './prompts';
 import CopyButton from './CopyButton';
@@ -26,20 +26,20 @@ const Generator = (): HTMLElement => {
     return prompt;
   }
   
-  const text = span({}, getNextPrompt());
+  const prompt = new SimpleObservable(getNextPrompt());
   
   return div({}, 
-    blockquote({class: "main-text"}, text),
+    blockquote({class: "main-text"}, prompt),
     alert,
     p({class: "row full-width is-center"},
       button(
         {
           class: "button primary",
-          onclick: () => text.innerText = getNextPrompt()
+          onclick: () => prompt.set(getNextPrompt())
         }, 
         "New Prompt"
       ),
-      CopyButton(text)
+      CopyButton(prompt)
     ),
   );
 }
