@@ -23,7 +23,7 @@ const app = div({ class: "container"},
   div({class: "row hero-container"}, 
     img({class: "hero col-6", src: "/images/undraw_social_friends.svg"}),
     div({class: "col-6"}, 
-      p({}, 
+      p( 
         "In our current state of social isolation in response to COVID-19, many people are experiencing ",
         a(
           {
@@ -34,11 +34,11 @@ const app = div({ class: "container"},
         ),
         ". This web app aims to help alleviate that, by providing questions to help you have meaningful conversations, even over a video call or text message conversation."
       ),
-      p({}, "We recommend that both you and your friend answer the question."),
+      p("We recommend that both you and your friend answer the question."),
     ),  
   ),
   Generator(),
-  p({}, 
+  p( 
     "The more prompts you go through, the more they'll require you to disclose. This reciprocal and escalating self-disclosure ", 
     a(
       {href: "https://journals.sagepub.com/doi/abs/10.1177/0146167297234003", target: "blank"}, 
@@ -47,7 +47,7 @@ const app = div({ class: "container"},
     " to lead to a feeling of closeness between conversational partners."
   ),
   UsageHelper(),
-  footer({},
+  footer(
     small({class: "text-grey"},
       "Built with 💜 by ",
       a({href:"https://github.com/tylermercer", target: "blank"}, "Tyler Mercer"),
