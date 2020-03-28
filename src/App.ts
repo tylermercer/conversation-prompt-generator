@@ -50,17 +50,21 @@ const App = () => div({ class: "container"},
   footer(
     small({class: "text-grey"},
       "Built with 💜 by ",
-      a({href:"https://github.com/tylermercer", target: "blank"}, "Tyler Mercer"),
+      a({href: "https://github.com/tylermercer", target: "blank"}, "Tyler Mercer"),
       ". ",
       span({class:"hide-sm hide-md hide-lg"},
         a(
-          {href:"https://github.com/tylermercer/conversation-prompt-generator", target: "blank"},
+          {href: "https://github.com/tylermercer/conversation-prompt-generator", target: "blank"},
           "Contribute on GitHub!"
         ),
         " "
       ),
       "Some prompts are adapted from ",
-      a({href:"https://journals.sagepub.com/doi/abs/10.1177/0146167297234003", target: "blank"}, "this article"),
+      a({href: "https://journals.sagepub.com/doi/abs/10.1177/0146167297234003", target: "blank"}, "this article"),
+      ". Art from ",
+      a({href: "https://undraw.co/", target: "blank"},
+        "unDraw"
+      ),
       "."
     ),
   ),
