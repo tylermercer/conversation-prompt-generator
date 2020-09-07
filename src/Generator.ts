@@ -13,7 +13,7 @@ const Generator = (): HTMLElement => {
   alert.style.display = "none";
 
   const getNextPrompt = ():string => {
-    let index = Math.floor(Math.random() * Math.min(remainingPrompts.length, 5));
+    let index = Math.floor(Math.random() * Math.min(remainingPrompts.length, 3));
     let prompt = remainingPrompts[index];
     if (remainingPrompts.length <= 1) {
       alert.style.display = "";
