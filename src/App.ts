@@ -24,13 +24,13 @@ const App = () => div({ class: "container"},
     img({class: "hero col-6", src: "/images/undraw_social_friends.svg"}),
     div({class: "col-6"},
       p(
-        "In our current state of social isolation in response to COVID-19, many people are experiencing ",
+        "In our current state of social isolation in response to COVID-19, meaningful social connection ",
         a(
           {
             href: "https://www.deseret.com/opinion/2020/3/22/21185578/coronavirus-covid-19-side-effect-social-distancing-isolation-quarantine-loneliness",
             target: "blank"
           },
-          "profound loneliness"
+          "can be hard to come by"
         ),
         ". This web app aims to help alleviate that, by providing questions to help you have meaningful conversations, even over a video call or text message conversation."
       ),
